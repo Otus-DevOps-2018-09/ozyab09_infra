@@ -18,4 +18,7 @@ Host someinternalhost
   ProxyCommand ssh -W %h:%p bastion
   IdentityFile ~/.ssh/appuser
 
-После этого можно подключаться :)
+* Кофигурация виртуальных машин:
+bastion_IP = 35.210.240.60
+someinternalhost_IP = 10.132.0.3
+
