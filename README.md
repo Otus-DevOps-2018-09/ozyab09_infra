@@ -23,9 +23,8 @@ Host someinternalhost
   Hostname local-server-ip
   User appuser
   ProxyCommand ssh -W %h:%p bastion
-  IdentityFile ~/.ssh/appuser```
-
-``````
+  IdentityFile ~/.ssh/appuser
+```
 
 Кофигурация виртуальных машин:
 ```
