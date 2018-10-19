@@ -1,4 +1,4 @@
-# ozyab09_infra
+ozyab09_infra
 ```ozyab09 Infra repository```
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-bastion)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09)
@@ -30,5 +30,41 @@ Host someinternalhost
 ```
 bastion_IP = 35.210.240.60
 someinternalhost_IP = 10.132.0.3
+```
+
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-testapp)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09)
+
+### Homework #4
+
+* Создание инстанса **Computr Engine**
+
+```
+gcloud compute instances create reddit-app \
+   --boot-disk-size=10GB \
+   --image-family ubuntu-1604-lts \
+   --image-project=ubuntu-os-cloud \
+   --machine-type=g1-small \
+   --tags puma-server \
+   --restart-on-failure \
+   --metadata-from-file startup-script=startup_script.sh
+```
+ 
+* Создание firewall правила:
+```
+gcloud compute \
+   --project=infra-219416 firewall-rules create default-puma-server \
+   --direction=INGRESS \
+   --priority=1000 \
+   --network=default \
+   --action=ALLOW \
+   --rules=tcp:9292 \
+   --source-ranges=0.0.0.0/0 \
+   --target-tags=puma-server
+```
+
+* Адрес сервера:
+```
+testapp_IP = 35.228.143.155
+testapp_port = 9292
 ```
 
