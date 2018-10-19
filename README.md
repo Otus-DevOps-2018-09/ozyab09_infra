@@ -1,5 +1,7 @@
 ozyab09_infra
-```ozyab09 Infra repository```
+```
+ozyab09 Infra repository
+```
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-bastion)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09)
 
@@ -36,7 +38,7 @@ someinternalhost_IP = 10.132.0.3
 
 ### Homework #4
 
-* Создание инстанса **Computr Engine**
+* Создание инстанса **Compute Engine**
 
 ```
 gcloud compute instances create reddit-app \
