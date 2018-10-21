@@ -74,10 +74,10 @@ testapp_port = 9292
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=packer-base)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
-* Создан файл ubuntu.json с простой конифгурацией образа Ubuntu, в которую включены установка mongodb и ruby. Параметры вынесены в отдельный файл variables.json (в репозитории отсутсвует)
+* Создан файл ubuntu.json с простой конфигурацией образа Ubuntu, в которую включены установка mongodb и ruby. Параметры вынесены в отдельный файл variables.json (в репозитории отсутствует)
 * В файле variables.json.example расположен образец файла variables.json
 * В образе, создаваемом файлом immutable.json также добавлен файл deploy.sh, который устанавливает web-севрис Puma
-* Была попытка добавить в файл deploy.sh systemd unit puma.servie (происходит скачиваение файла packer/files/puma.service из текущего репозитория в /etc/systemd/system/, но почему-то не сработало :( ) 
+* Была попытка добавить в файл deploy.sh systemd unit puma.servie (происходит скачивание файла packer/files/puma.service из текущего репозитория в /etc/systemd/system/, но почему-то не сработало :( ) 
 * Для проверки корректности файлов необходимо использовать: 
 ```
 packer validate  -var-file=variables.json.example ubuntu16.json
