@@ -30,11 +30,6 @@ ozyab09 Infra repository
 * Не удалось настроить provisioner приложения :(
 
 
-
-
-
-
-
 ### Homework #6
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
