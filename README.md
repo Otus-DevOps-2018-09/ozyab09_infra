@@ -70,18 +70,12 @@ testapp_IP = 35.228.143.155
 testapp_port = 9292
 ```
 
-### Homework #5
-
-[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=packer-base)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
-
-* Создан файл ubuntu.json с простой конфигурацией образа Ubuntu, в которую включены установка mongodb и ruby. Параметры вынесены в отдельный файл variables.json (в репозитории отсутствует)
-* В файле variables.json.example расположен образец файла variables.json
-* В образе, создаваемом файлом immutable.json также добавлен файл deploy.sh, который устанавливает web-севрис Puma
-* Была попытка добавить в файл deploy.sh systemd unit puma.servie (происходит скачивание файла packer/files/puma.service из текущего репозитория в /etc/systemd/system/, но почему-то не сработало :( ) 
-* Для проверки корректности файлов необходимо использовать: 
-```
-packer validate  -var-file=variables.json.example ubuntu16.json
-packer validate  -var-file=variables.json.example immutable.json
-```
-* В файле packer/config-scripts/create-reddit-vm.sh расположен скрипт создания виртуальной машины из созданного ранее образа
-
+### Homework #6
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+* Создана виртуальная машина reddit-app использую Terraform
+* Добавлен ключ для пользователя appuser
+* Выведен output с внешним IP созданной виртульной машины
+* Создано правило фаерволла
+* Инстансу добавлен тэг
+* Добавлен provisioner
+* Подключение для provisioner

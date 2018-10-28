@@ -3,7 +3,7 @@ cd reddit && bundle install
 puma -d 
 
 #deploy puma service
-#wget https://raw.githubusercontent.com/Otus-DevOps-2018-09/ozyab09_infra/packer-base/packer/scripts/deploy.sh -O /etc/systemd/system/puma.service
+wget https://raw.githubusercontent.com/Otus-DevOps-2018-09/ozyab09_infra/packer-base/packer/files/puma.service -O /etc/systemd/system/puma.service
 #systemctl daemon-reload
 #systemctl enable puma.service
 #systemctl start puma.service
