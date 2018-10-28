@@ -3,36 +3,23 @@ ozyab09_infra
 ozyab09 Infra repository
 ```
 
-[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-bastion)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+### Homework #5
 
-### Homework #3
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=packer-base)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
-Подключение в одну строку:
-
-```ssh -o ProxyCommand='ssh -W %h:%p appuser@bastion-ip' appuser@local-server-ip```
-
-Подключение через alias: ssh someinternalhost
-
-Необходимо добавить в ~/.ssh/config:
-
+* Создан файл ubuntu.json с простой конфигурацией образа Ubuntu, в которую включены установка mongodb и ruby. Параметры вынесены в отдельный файл variables.json (в репозитории отсутствует)
+* В файле variables.json.example расположен образец файла variables.json
+* В образе, создаваемом файлом immutable.json также добавлен файл deploy.sh, который устанавливает web-севрис Puma
+* В файл deploy.sh добавлен systemd unit puma.servie
+(происходит скачивание файла packer/files/puma.service из репозитория в /etc/systemd/system/ ) 
+* Для проверки корректности файлов необходимо использовать: 
 ```
-Host bastion
-  Hostname bastion-ip
-  User appuser
-  IdentityFile ~/.ssh/appuser
+packer validate  -var-file=variables.json.example ubuntu16.json
+packer validate  -var-file=variables.json.example immutable.json
+```
+* В файле packer/config-scripts/create-reddit-vm.sh расположен скрипт создания виртуальной машины из созданного ранее образа
 
-Host someinternalhost
-  Hostname local-server-ip
-  User appuser
-  ProxyCommand ssh -W %h:%p bastion
-  IdentityFile ~/.ssh/appuser
-```
 
-Кофигурация виртуальных машин:
-```
-bastion_IP = 35.210.240.60
-someinternalhost_IP = 10.132.0.3
-```
 
 ### Homework #4
 
@@ -70,12 +57,33 @@ testapp_IP = 35.228.143.155
 testapp_port = 9292
 ```
 
-### Homework #6
-[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
-* Создана виртуальная машина reddit-app использую Terraform
-* Добавлен ключ для пользователя appuser
-* Выведен output с внешним IP созданной виртульной машины
-* Создано правило фаерволла
-* Инстансу добавлен тэг
-* Добавлен provisioner
-* Подключение для provisioner
+### Homework #3
+
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-bastion)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+
+Подключение в одну строку:
+
+```ssh -o ProxyCommand='ssh -W %h:%p appuser@bastion-ip' appuser@local-server-ip```
+
+Подключение через alias: ssh someinternalhost
+
+Необходимо добавить в ~/.ssh/config:
+
+```
+Host bastion
+  Hostname bastion-ip
+  User appuser
+  IdentityFile ~/.ssh/appuser
+
+Host someinternalhost
+  Hostname local-server-ip
+  User appuser
+  ProxyCommand ssh -W %h:%p bastion
+  IdentityFile ~/.ssh/appuser
+```
+
+Кофигурация виртуальных машин:
+```
+bastion_IP = 35.210.240.60
+someinternalhost_IP = 10.132.0.3
+```
