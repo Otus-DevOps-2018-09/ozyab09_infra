@@ -5,6 +5,7 @@ ozyab09 Infra repository
 
 ### Homework #6
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+
 ##Работа с Terraform:
 * Создана виртуальная машина reddit-terraform 
 * Добавлен ключ для пользователя appuser
@@ -19,6 +20,9 @@ ozyab09 Infra repository
 ##Задачния со *
 * Добавлены пользователи appuser1-3 используя google_compute_project_metadata
 * Добавлен пользователь appuser_web через web-консоль. При следующем выполнении **terraform apply** пользователь быль удален
+* Добавлен loadbalancer. Изменен outputs.tf на вывод внешнего ip loadbalancer'a, и на вывод всех ip-адресов инстансов
+* Проблемой такой реализиации является то, что база данных находится на каждом инстансе. При создании поста в вэб-интерфейсе он будет размещен на одном из инстансов. Необходимо наличие единой базы данных
+
 
 ### Homework #5
 

@@ -1,7 +1,7 @@
 provider "google" {
   version = "1.4.0"
   project = "${var.project}"
-  region  = "${var.project}"
+  region  = "${var.region}"
 }
 
 resource "google_compute_project_metadata" "default" {
@@ -11,9 +11,10 @@ resource "google_compute_project_metadata" "default" {
 }
 
 resource "google_compute_instance" "app" {
-  name         = "reddit-terraform"
+  name         = "reddit-app-${count.index}"
   machine_type = "f1-micro"
   zone         = "${var.zone}"
+  count        = "${var.instance_count}"
 
   boot_disk {
     initialize_params {
