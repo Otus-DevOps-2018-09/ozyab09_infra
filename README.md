@@ -3,6 +3,38 @@ ozyab09_infra
 ozyab09 Infra repository
 ```
 
+### Homework #7
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-2)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+
+## Продолжаем работать с Terraform:
+* Создано правило фаерволла default-allow-ssh. Применить его не удалось, тк правило с таким именем уже существует
+* Команда `terraform import google_compute_firewall.firewall_ssh FIREWALL_NAME` позволяет импортировать существующее правило
+* Добавлен description в правило
+* Определен ресурс google_compute_address
+* Создана ссылка в ресурсе VM на созданный аттрибут ресурса google_compute_address
+* Созданы образы reddit-db-base	и reddit-app-base в GCP
+* Конфигурация VM с приложением перенесена в отдельный файл app.tf, база данных - в файл db.tf
+* В файле vpc.tf вынесены правила фаервола для ssh доступа
+* В фале main.tf оставили описание `только` описание провайдера
+* Создана папка modules, которую будем наполнять модулями: db, app
+* В main.tf добавленв информация о модулях
+* Команда `terraform get` загружает модули. Если посмотреть в описание файла `.terraform/modules/modules.json`, то увидим список загруженных модулей
+* Добавлен модуль vpc
+* Произведена параметризация модуля vpc
+* Проверена работа параметров vpc
+* Добавлены окружения stage и prod
+* Удалены ненужные файлы в директории `terraform/`
+* Создание бакета в сервисе Storage
+* Добавлены файлы backend.tf для хранения стэйта в gcs
+* При одновременном запуске двух окружений, которые обращаются к gsp, получаем ошибку `Error locking state`
+* Не удалось настроить provisioner приложения :(
+
+
+
+
+
+
+
 ### Homework #6
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
