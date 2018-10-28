@@ -16,6 +16,9 @@ ozyab09 Infra repository
 * Отформатированы конфигурационные файлы (terraform init)
 * Добавлен файл terraform.tfvars.example
 
+##Задачния со *
+* Добавлены пользователи appuser1-3 используя google_compute_project_metadata
+* Добавлен пользователь appuser_web через web-консоль. При следующем выполнении **terraform apply** пользователь быль удален
 
 ### Homework #5
 
