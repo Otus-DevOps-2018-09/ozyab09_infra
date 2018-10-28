@@ -7,7 +7,7 @@ ozyab09 Infra repository
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-2)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 ## Продолжаем работать с Terraform:
-* Создано правило фаерволла default-allow-ssh. Применить его не удалось, тк правило с таким именем уже существует
+* Создано правило фаерволла `default-allow-ssh`. Применить его не удалось, тк правило с таким именем уже существует
 * Команда `terraform import google_compute_firewall.firewall_ssh FIREWALL_NAME` позволяет импортировать существующее правило
 * Добавлен description в правило
 * Определен ресурс google_compute_address
@@ -15,7 +15,7 @@ ozyab09 Infra repository
 * Созданы образы reddit-db-base	и reddit-app-base в GCP
 * Конфигурация VM с приложением перенесена в отдельный файл app.tf, база данных - в файл db.tf
 * В файле vpc.tf вынесены правила фаервола для ssh доступа
-* В фале main.tf оставили описание `только` описание провайдера
+* В фале main.tf только описание провайдера
 * Создана папка modules, которую будем наполнять модулями: db, app
 * В main.tf добавленв информация о модулях
 * Команда `terraform get` загружает модули. Если посмотреть в описание файла `.terraform/modules/modules.json`, то увидим список загруженных модулей
