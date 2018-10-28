@@ -14,9 +14,7 @@ ozyab09 Infra repository
 * Разворачивание приложения используя provisioner
 * Добавлены input переменные, включая project, public_key_path, disk_image, private_key_path и zone
 * Отформатированы конфигурационные файлы (terraform init)
-
-
-
+* Добавлен файл terraform.tfvars.example
 
 
 ### Homework #5
@@ -103,3 +101,4 @@ Host someinternalhost
 bastion_IP = 35.210.240.60
 someinternalhost_IP = 10.132.0.3
 ```
+
