@@ -6,10 +6,10 @@ ozyab09 Infra repository
 ### Homework #6
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
-##Работа с Terraform:
+## Работа с Terraform:
 * Создана виртуальная машина reddit-terraform 
 * Добавлен ключ для пользователя appuser
-* Выведен output с внешним IP созданной виртульной машины используя outputs.tf
+* Выведен output с внешним IP созданной виртуальной машины используя outputs.tf
 * Создано правило фаерволла
 * Инстансу добавлен тэг
 * Разворачивание приложения используя provisioner
@@ -17,7 +17,7 @@ ozyab09 Infra repository
 * Отформатированы конфигурационные файлы (terraform init)
 * Добавлен файл terraform.tfvars.example
 
-##Задачния со *
+## Задачи со *
 * Добавлены пользователи appuser1-3 используя google_compute_project_metadata
 * Добавлен пользователь appuser_web через web-консоль. При следующем выполнении **terraform apply** пользователь быль удален
 * Добавлен loadbalancer. Изменен outputs.tf на вывод внешнего ip loadbalancer'a, и на вывод всех ip-адресов инстансов
