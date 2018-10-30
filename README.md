@@ -2,6 +2,23 @@ ozyab09_infra
 ```
 ozyab09 Infra repository
 ```
+### Homework 8
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+
+* Установлен Ansible на локальное окружение вместе с зависимостями
+* Создан invenfory file в ini-формате, и в формате yaml
+* Создан ansible.cfg
+* Опробованы ad-hoc команды
+* Создан простой playbook для клонирования репозитория
+* Удалив склонированный репозиторий на удаленном сервере с помощью ad-hoc команд, и повторно выполнив playbook, результат будет таким:
+```
+PLAY RECAP *
+appserver : ok=2 changed=1 unreachable=0 failed=0
+```
+то есть произошло одно изменение, что означает, что действие `было выполнено`
+* Добавлен `inventory.json`. Для теста необходимо выполнить `ansible all -i inventory.json -m ping`
+
+
 
 ### Homework #7
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-2)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
