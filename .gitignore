@@ -6,3 +6,4 @@ tfstate.backup
 .terraform/
 terraform.tfstate.backup
 .terraform.tfstate.lock.info
+*.retry

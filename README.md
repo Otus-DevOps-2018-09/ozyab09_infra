@@ -2,7 +2,30 @@ ozyab09_infra
 ```
 ozyab09 Infra repository
 ```
-### Homework 8
+
+### Homework 9 (Ansible-2)
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+
+* Созданы playbook reddit_app.yml и шаблон конфига MongoDB mongod.conf.j2
+* Добавлен handler для перезапуска mongod
+* Добавлен файл puma.service
+* В reddit_app добавлен task компирования puma.service на хост db
+* Добавлена команда автозапуска сервиса puma
+* Добавлен шаблон файла db_config.j2
+* Добавлена задача копирования шаблона конфига db_config.j2 на хост db
+* Добавлена переменная db_host в файл reddt_app.yml
+* Добавлен output переменной db_internal_ip
+* Добавлены модулт git и bundle для клонирования последней версии кода приложения и установки зависимых гемов через bundle
+* В файле reddit_app2.yml сценарий разделен на отдельные блоки для app, db и для деплоя приложения
+* Созданы файлы app.yml, db.yml и deploy.yml
+* Сценарий site.yml включает в себя include из сценариев app.yml, db.yml и deploy.yml
+* Созданы файлы packer_app.yml и packer_db.yml
+* Заменена секция Provision в образах packer/app.json и packer/db.json на Ansible 
+
+
+
+
+### Homework 8 (Ansible-1)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 * Установлен Ansible на локальное окружение вместе с зависимостями
@@ -20,7 +43,7 @@ appserver : ok=2 changed=1 unreachable=0 failed=0
 
 
 
-### Homework #7
+### Homework #7 (Terraform-2)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-2)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 ## Продолжаем работать с Terraform:
@@ -46,7 +69,7 @@ appserver : ok=2 changed=1 unreachable=0 failed=0
 * При одновременном запуске двух окружений, которые обращаются к gsp, получаем ошибку `Error locking state`
 * Не удалось настроить provisioner приложения :(
 
-### Homework #6
+### Homework #6 (Terraform-1)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 ## Работа с Terraform:
@@ -67,7 +90,7 @@ appserver : ok=2 changed=1 unreachable=0 failed=0
 * Проблемой такой реализиации является то, что база данных находится на каждом инстансе. При создании поста в вэб-интерфейсе он будет размещен на одном из инстансов. Необходимо наличие единой базы данных
 
 
-### Homework #5
+### Homework #5 (Packer)
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=packer-base)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
@@ -85,7 +108,7 @@ packer validate  -var-file=variables.json.example immutable.json
 
 
 
-### Homework #4
+### Homework #4 (GKE)
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-testapp)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
@@ -121,7 +144,7 @@ testapp_IP = 35.228.143.155
 testapp_port = 9292
 ```
 
-### Homework #3
+### Homework #3 (Bastion)
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-bastion)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
