@@ -1,0 +1,13 @@
+[Unit]
+Description=Puma Service
+After=syslog.target
+ 
+[Service]
+WorkingDirectory=/home/appuser/reddit
+ExecStart=/bin/bash -lc 'puma'
+Type=forking
+ 
+[Install]
+WantedBy=multi-user.target
+Alias=puma.service
+
