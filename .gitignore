@@ -7,3 +7,4 @@ tfstate.backup
 terraform.tfstate.backup
 .terraform.tfstate.lock.info
 *.retry
+jdauphant.nginx
