@@ -3,7 +3,8 @@ Description=Puma Service
 After=syslog.target
  
 [Service]
-ExecStart='/usr/local/bin/puma -d'
+WorkingDirectory=/home/appuser/reddit
+ExecStart=/bin/bash -lc 'puma'
 Type=forking
  
 [Install]

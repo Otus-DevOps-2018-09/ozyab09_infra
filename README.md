@@ -107,7 +107,6 @@ packer validate  -var-file=variables.json.example immutable.json
 * В файле packer/config-scripts/create-reddit-vm.sh расположен скрипт создания виртуальной машины из созданного ранее образа
 
 
-
 ### Homework #4 (GKE)
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-testapp)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
@@ -174,4 +173,3 @@ Host someinternalhost
 bastion_IP = 35.210.240.60
 someinternalhost_IP = 10.132.0.3
 ```
-
