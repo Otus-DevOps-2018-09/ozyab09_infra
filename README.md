@@ -107,5 +107,11 @@ Host someinternalhost
 ```
 bastion_IP = 35.210.240.60
 someinternalhost_IP = 10.132.0.3
+
 ```
 
+Кофигурация виртуальных машин:
+```
+bastion_IP = 35.210.240.60
+someinternalhost_IP = 10.132.0.3
+```
