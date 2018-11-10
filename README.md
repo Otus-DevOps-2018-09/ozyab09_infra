@@ -3,6 +3,27 @@ ozyab09_infra
 ozyab09 Infra repository
 ```
 
+### Homework #6
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=terraform-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+
+## Работа с Terraform:
+* Создана виртуальная машина reddit-terraform 
+* Добавлен ключ для пользователя appuser
+* Выведен output с внешним IP созданной виртуальной машины используя outputs.tf
+* Создано правило фаерволла
+* Инстансу добавлен тэг
+* Разворачивание приложения используя provisioner
+* Добавлены input переменные, включая project, public_key_path, disk_image, private_key_path и zone
+* Отформатированы конфигурационные файлы (terraform init)
+* Добавлен файл terraform.tfvars.example
+
+## Задачи со *
+* Добавлены пользователи appuser1-3 используя google_compute_project_metadata
+* Добавлен пользователь appuser_web через web-консоль. При следующем выполнении **terraform apply** пользователь быль удален
+* Добавлен loadbalancer. Изменен outputs.tf на вывод внешнего ip loadbalancer'a, и на вывод всех ip-адресов инстансов
+* Проблемой такой реализиации является то, что база данных находится на каждом инстансе. При создании поста в вэб-интерфейсе он будет размещен на одном из инстансов. Необходимо наличие единой базы данных
+
+
 ### Homework #5
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=packer-base)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
@@ -80,6 +101,13 @@ Host someinternalhost
   User appuser
   ProxyCommand ssh -W %h:%p bastion
   IdentityFile ~/.ssh/appuser
+```
+
+Кофигурация виртуальных машин:
+```
+bastion_IP = 35.210.240.60
+someinternalhost_IP = 10.132.0.3
+
 ```
 
 Кофигурация виртуальных машин:
