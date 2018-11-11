@@ -20,8 +20,6 @@ ozyab09 Infra repository
 * Создан файл с паролем `~/.ansible/vault.key` (вне репозитория)
 * Паролем зашифрованы файлы `environments/prod/credentials.yml` и `environments/stage/credentials.yml`
 
-
-
 ### Homework 9 (Ansible-2)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-2)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
