@@ -41,5 +41,4 @@ variable db_disk_image {
 
 variable source_ranges {
   description = "IP address for firewall rule"
-  default     = ["5.228.42.47/32"]
 }
