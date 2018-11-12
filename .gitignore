@@ -1,4 +1,3 @@
-packer/variables.json
 *.tfstate
 tfstate.*.backup
 tfstate.backup
@@ -7,9 +6,3 @@ tfstate.backup
 terraform.tfstate.backup
 .terraform.tfstate.lock.info
 *.retry
-*.tfstate
-*.tfstate.*.backup
-*.tfstate.backup
-*.tfvars
-.terraform/
-
