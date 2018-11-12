@@ -3,7 +3,7 @@ ozyab09_infra
 ozyab09 Infra repository
 ```
 
-### Homework 9 (Ansible-2)
+### Homework #9 (Ansible-2)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 * Созданы playbook reddit_app.yml и шаблон конфига MongoDB mongod.conf.j2
@@ -25,7 +25,7 @@ ozyab09 Infra repository
 
 
 
-### Homework 8 (Ansible-1)
+### Homework #8 (Ansible-1)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 * Установлен Ansible на локальное окружение вместе с зависимостями

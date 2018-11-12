@@ -12,4 +12,4 @@ terraform.tfstate.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
-
+jdauphant.nginx
