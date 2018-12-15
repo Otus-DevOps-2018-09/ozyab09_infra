@@ -3,7 +3,6 @@ ozyab09_infra
 ozyab09 Infra repository
 ```
 
-
 ### Homework 11 (Ansible-4)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-4)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 * `Vagranfile` в директории `ansible` описывает конфигурацию виртуальных машин 
@@ -120,6 +119,7 @@ def test_mongo_port(host):
 ```
 * Использованы роли `db` и `app` в плейбуках `packer_db.yml` и `packer_app.yml`
 
+
 ### Homework 10 (Ansible-3)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-3)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 * Созданы роли `app` и `db`
@@ -155,10 +155,7 @@ def test_mongo_port(host):
 * Созданы файлы packer_app.yml и packer_db.yml
 * Заменена секция Provision в образах packer/app.json и packer/db.json на Ansible 
 
-
-
-
-### Homework 8 (Ansible-1)
+### Homework #8 (Ansible-1)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 * Установлен Ansible на локальное окружение вместе с зависимостями
@@ -240,7 +237,6 @@ packer validate  -var-file=variables.json.example immutable.json
 * В файле packer/config-scripts/create-reddit-vm.sh расположен скрипт создания виртуальной машины из созданного ранее образа
 
 
-
 ### Homework #4 (GKE)
 
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=cloud-testapp)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
@@ -300,13 +296,6 @@ Host someinternalhost
   User appuser
   ProxyCommand ssh -W %h:%p bastion
   IdentityFile ~/.ssh/appuser
-```
-
-Кофигурация виртуальных машин:
-```
-bastion_IP = 35.210.240.60
-someinternalhost_IP = 10.132.0.3
-
 ```
 
 Кофигурация виртуальных машин:
