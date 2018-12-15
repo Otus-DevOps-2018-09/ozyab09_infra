@@ -2,7 +2,6 @@
      "project_id": "infra-*",
      "source_image_family": "ubuntu-1604-lts",
      "machine_type": "f1-micro",
-     "image_description": "Puma Web Service",
      "disk_size": "10",
      "disk_type": "pd-standard",
      "network": "default",

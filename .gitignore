@@ -8,3 +8,14 @@ terraform.tfstate.backup
 .terraform.tfstate.lock.info
 *.retry
 jdauphant.nginx
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+pyenv
+.vscode/
+.yamllint
+packer/variables.json
