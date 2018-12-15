@@ -3,8 +3,24 @@ ozyab09_infra
 ozyab09 Infra repository
 ```
 
-### Homework #9 (Ansible-2)
-[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+### Homework 10 (Ansible-3)
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-3)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
+* Созданы роли `app` и `db`
+* Файлы `app.yml` и `db.yml` переписаны под использование ролей
+* Создана директория `environments` для определения настроек окружения
+* Копия файла `ansible/inventory` перенесена в `ansible/environments/prod` и `ansible/environments/stage`. Исходный файл при этом удален
+* Файлом `inventory` по умолчанию задан файл `./environments/stage/inventory`
+* Созданы директории `group_vars` в директориях окружений
+* Созданы групповые переменные для групп хостов `app`, `db` и `all` в окружениях `stage` и `prod`
+* Добавлен вывод информации о том, в каком окружении находится конфигурируемый хост
+* Playbook'и организованы согласно best practice
+* Исправлены файлы `packer/app.json` и `packer/db.json` согласно расположению файлов `packer_app.yml` и `packer_db.yml` соответственно
+* Установлена роль `jdauphant.nginx`. Теперь сервис `puma` доступен по порту 80
+* Создан файл с паролем `~/.ansible/vault.key` (вне репозитория)
+* Паролем зашифрованы файлы `environments/prod/credentials.yml` и `environments/stage/credentials.yml`
+
+### Homework 9 (Ansible-2)
+[![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-2)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
 
 * Созданы playbook reddit_app.yml и шаблон конфига MongoDB mongod.conf.j2
 * Добавлен handler для перезапуска mongod
@@ -21,9 +37,6 @@ ozyab09 Infra repository
 * Сценарий site.yml включает в себя include из сценариев app.yml, db.yml и deploy.yml
 * Созданы файлы packer_app.yml и packer_db.yml
 * Заменена секция Provision в образах packer/app.json и packer/db.json на Ansible 
-
-
-
 
 ### Homework #8 (Ansible-1)
 [![Build Status](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra.svg?branch=ansible-1)](https://travis-ci.com/Otus-DevOps-2018-09/ozyab09_infra)
